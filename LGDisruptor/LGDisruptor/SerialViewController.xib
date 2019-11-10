@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SerialViewController" customModule="LGDisruptor" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="thC-2U-0uY" id="OHP-hV-wdz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="thC-2U-0uY">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE4-yz-9Bz">
+                    <rect key="frame" x="0.0" y="218.5" width="375" height="375"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aE4-yz-9Bz" secondAttribute="height" multiplier="1:1" id="O5z-P9-luq"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="GfM-Ss-GWD" appends="YES" id="e9Z-34-M0N"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUS-FH-HCt">
+                    <rect key="frame" x="0.0" y="712" width="375" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="okY-H9-UBS"/>
+                    </constraints>
+                    <state key="normal" title="!!!!FIRE!!!!"/>
+                    <connections>
+                        <action selector="fireAction:" destination="-1" eventType="touchUpInside" id="Hkz-q4-VVE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aE4-yz-9Bz" firstAttribute="leading" secondItem="thC-2U-0uY" secondAttribute="leading" id="AcO-t7-FfK"/>
+                <constraint firstAttribute="trailing" secondItem="xUS-FH-HCt" secondAttribute="trailing" id="Bmu-Qk-fKz"/>
+                <constraint firstItem="aE4-yz-9Bz" firstAttribute="centerY" secondItem="thC-2U-0uY" secondAttribute="centerY" id="ECw-Kh-RV7"/>
+                <constraint firstItem="eAV-57-JlC" firstAttribute="bottom" secondItem="xUS-FH-HCt" secondAttribute="bottom" id="M5Y-qm-VoE"/>
+                <constraint firstAttribute="trailing" secondItem="aE4-yz-9Bz" secondAttribute="trailing" id="OxQ-Ro-8m2"/>
+                <constraint firstItem="xUS-FH-HCt" firstAttribute="leading" secondItem="thC-2U-0uY" secondAttribute="leading" id="xeC-n9-6DV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="eAV-57-JlC"/>
+            <point key="canvasLocation" x="-55" y="-463"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="GfM-Ss-GWD">
+            <connections>
+                <action selector="panAction:" destination="-1" id="pPA-Gv-Gvd"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>
